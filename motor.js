@@ -1,5 +1,9 @@
 const pageStatus = 0;
 
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+});
+
 if (pageStatus === 1) {
   const overlay = document.querySelector('div'); // Finde das Overlay-Element
   if (overlay) {
